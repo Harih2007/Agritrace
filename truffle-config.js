@@ -3,6 +3,8 @@ require("dotenv").config();
 
 const MNEMONIC_KEY = process.env.MNEMONIC_KEY;
 const RPC_URL = process.env.INFURA_API;
+const AVALANCHE_RPC = process.env.AVALANCHE_RPC || "https://api.avax-test.network/ext/bc/C/rpc";
+
 module.exports = {
   networks: {
     development: {
@@ -18,6 +20,24 @@ module.exports = {
       skipDryRun: true,
       gas: 6000000,
       gasPrice: 10000000000,
+    },
+    avalanche_fuji: {
+      provider: () => new HDWalletProvider(MNEMONIC_KEY, AVALANCHE_RPC),
+      network_id: 43113,
+      confirmations: 3,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      gas: 8000000,
+      gasPrice: 25000000000,
+    },
+    avalanche_mainnet: {
+      provider: () => new HDWalletProvider(MNEMONIC_KEY, "https://api.avax.network/ext/bc/C/rpc"),
+      network_id: 43114,
+      confirmations: 3,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      gas: 8000000,
+      gasPrice: 25000000000,
     },
   },
   compilers: {

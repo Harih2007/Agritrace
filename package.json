@@ -1,6 +1,29 @@
 {
+  "name": "agrichain-avalanche",
+  "version": "1.0.0",
+  "description": "Blockchain-based supply chain management on Avalanche",
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "compile": "truffle compile",
+    "deploy:fuji": "truffle migrate --network avalanche_fuji",
+    "deploy:mainnet": "truffle migrate --network avalanche_mainnet",
+    "deploy:local": "truffle migrate --network development",
+    "post-deploy": "node scripts/deploy-avalanche.js",
+    "test:contracts": "truffle test",
+    "test:api": "node scripts/test-api.js",
+    "backend": "cd backend && npm run dev",
+    "backend:start": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "frontend:start": "cd frontend && npm start",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd .."
+  },
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.16",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "truffle": "^5.11.0"
   }
 }

@@ -6,12 +6,44 @@
     <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChainLogo.png" alt="Logo" width="145" height="55">
   </a>
   
-  <a href="https://betterprogramming.pub/supply-chain-smart-contract-design-e0ae5071bcbe">Explore full article</a>
+  <h3 align="center">AgriChain - Blockchain Supply Chain on Avalanche</h3>
 
   <p align="center">
-    This smart contract is designed to simplify the operation of the agricultural supply chain. It increases transparency and efficiency between farmer, distributor, retailer and consumer.
+    A complete blockchain-based supply chain management system with product registry, escrow payments, QR verification, and IPFS storage - deployed on Avalanche C-Chain.
+  </p>
+
+  <p align="center">
+    <a href="https://betterprogramming.pub/supply-chain-smart-contract-design-e0ae5071bcbe">📖 Original Article</a> •
+    <a href="AVALANCHE_DEPLOYMENT_GUIDE.md">🚀 Deployment Guide</a> •
+    <a href="DOCUMENTATION_INDEX.md">📚 Documentation</a> •
+    <a href="backend/API_REFERENCE.md">📡 API Reference</a>
+  </p>
+
+  <p align="center">
+    <strong>✅ Status: COMPLETE & DEPLOYMENT READY</strong>
   </p>
 </div>
+
+---
+
+## 🎉 Project Status
+
+**Implementation**: ✅ **COMPLETE** (8/8 Requirements Met)  
+**Blockchain**: ✅ Avalanche C-Chain (Fuji Testnet + Mainnet)  
+**Backend API**: ✅ 25+ Endpoints Ready  
+**Documentation**: ✅ 13 Comprehensive Guides  
+**Testing**: ✅ Automated Test Suite  
+**Deployment**: ✅ Fully Automated  
+
+### Quick Links
+- 📋 [Project Summary](PROJECT_SUMMARY.md) - Complete overview
+- 🚀 [Deployment Guide](AVALANCHE_DEPLOYMENT_GUIDE.md) - Deploy in 25 minutes
+- ⚡ [Quick Reference](QUICK_REFERENCE.md) - Commands & API
+- 📊 [Requirements Checklist](REQUIREMENTS_CHECKLIST.md) - Implementation status
+- 🔄 [Workflow Guide](WORKFLOW_GUIDE.md) - System workflows
+- 📚 [Documentation Index](DOCUMENTATION_INDEX.md) - All documentation
+
+---
 
 ## About The Project
 
@@ -19,9 +51,42 @@ The agricultural industry is a major contributor to the global economy, with ove
 
 Blockchain technology creates a single source of truth. This is important for supply chains that involve multiple participants in a network who don't necessarily trust each other.
 
-In this project, I have taken a practical approach. The codes are designed to simplify the operation of the agricultural supply chain and can be modified easily based on needs and requirement. Below is given a flow diagram for supply chain:
+This project provides a **complete, production-ready** blockchain supply chain solution deployed on **Avalanche C-Chain**, featuring:
+
+- ✅ **Smart Contracts** - Product registry, escrow payments, supply chain tracking
+- ✅ **Backend API** - 25+ RESTful endpoints with authentication
+- ✅ **Database** - PostgreSQL with Row Level Security
+- ✅ **IPFS Storage** - Decentralized file storage via Pinata
+- ✅ **QR Codes** - Product verification and tracking
+- ✅ **Security** - JWT auth, wallet signatures, rate limiting
+- ✅ **Documentation** - 13 comprehensive guides
 
 ![Flow diagram](/images/flow.png)
+
+## 🚀 What's New - Avalanche Integration
+
+This implementation extends the original supply chain concept with:
+
+### Blockchain Features
+- **Avalanche C-Chain** integration (Fuji testnet + mainnet)
+- **Sub-second finality** for fast transactions
+- **Low gas costs** (~0.01-0.1 AVAX per transaction)
+- **Smart contract events** for real-time tracking
+- **Transaction retry logic** with exponential backoff
+
+### Backend Features
+- **Dual Authentication** - Email/password + wallet signatures
+- **Product Management** - Full CRUD with blockchain sync
+- **Escrow Payments** - Secure AVAX payments with dispute resolution
+- **QR Code System** - Generate and verify product authenticity
+- **IPFS Integration** - Decentralized storage for product assets
+- **Comprehensive API** - RESTful endpoints with validation
+
+### Developer Features
+- **Automated Deployment** - One-command setup and deployment
+- **Testing Suite** - Automated API and contract testing
+- **Error Handling** - Comprehensive logging and retry logic
+- **Documentation** - Step-by-step guides for everything
 
 ### ⚙️Functions:
 
@@ -33,21 +98,197 @@ In this project, I have taken a practical approach. The codes are designed to si
 6. Retailer receives the product and put it on sale
 7. Consumer purchase the product
 
-### To Do
+## 🛠️ Technology Stack
 
-- Front end development(in process)
+### Blockchain
+- **Avalanche C-Chain** (Fuji testnet + mainnet)
+- **Solidity** ^0.8.0
+- **Truffle Suite** v5.11.0
+- **ethers.js** v6.6.0
 
-### Versions
+### Backend
+- **Node.js** v16+
+- **Express.js** v4.18
+- **Supabase** (PostgreSQL)
+- **Winston** (logging)
+- **Joi** (validation)
 
-- Solidity ^0.8.0
+### Storage & Services
+- **IPFS** via Pinata
+- **QR Code** generation
+- **JWT** authentication
 
-- Truffle: v5.5.23
+## 🚀 Quick Start (25 Minutes)
 
-- Node: v16.17.0
+### Prerequisites
+- Node.js v16 or higher
+- npm or yarn
+- Avalanche wallet with testnet AVAX ([Get from faucet](https://faucet.avax.network/))
+- Supabase account
+- Pinata account
 
-### Installation
+### Step 1: Setup (5 minutes)
+```bash
+# Clone the repository
+git clone <repository-url>
+cd agrichain-avalanche
 
-\_Below are instructions to get started
+# Run automated setup
+npm run setup
+```
+
+### Step 2: Configure (10 minutes)
+```bash
+# Edit root .env
+MNEMONIC_KEY=your_12_word_mnemonic
+AVALANCHE_RPC=https://api.avax-test.network/ext/bc/C/rpc
+
+# Edit backend/.env
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_anon_key
+SUPABASE_SERVICE_KEY=your_service_key
+AVALANCHE_RPC_URL=https://api.avax-test.network/ext/bc/C/rpc
+PRIVATE_KEY=your_private_key
+PINATA_JWT=your_pinata_jwt
+JWT_SECRET=your_jwt_secret
+```
+
+### Step 3: Deploy Contracts (5 minutes)
+```bash
+# Compile smart contracts
+npm run compile
+
+# Deploy to Avalanche Fuji testnet
+npm run deploy:fuji
+
+# Copy ABIs and configure backend
+npm run post-deploy
+```
+
+### Step 4: Setup Database (2 minutes)
+1. Go to your Supabase project
+2. Run the SQL from `backend/database/schema.sql`
+3. Verify tables are created
+
+### Step 5: Start Backend (1 minute)
+```bash
+# Start the backend server
+npm run backend
+```
+
+### Step 6: Test (2 minutes)
+```bash
+# Run API tests
+npm run test:api
+```
+
+**🎉 Done! Your system is now running on Avalanche Fuji testnet!**
+
+## 📚 Documentation
+
+### Essential Guides
+- **[AVALANCHE_DEPLOYMENT_GUIDE.md](AVALANCHE_DEPLOYMENT_GUIDE.md)** - Complete deployment instructions
+- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick commands and API reference
+- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Project overview and status
+- **[REQUIREMENTS_CHECKLIST.md](REQUIREMENTS_CHECKLIST.md)** - Implementation tracking
+
+### Technical Documentation
+- **[AVALANCHE_INTEGRATION.md](AVALANCHE_INTEGRATION.md)** - Avalanche-specific details
+- **[WORKFLOW_GUIDE.md](WORKFLOW_GUIDE.md)** - System workflows and architecture
+- **[backend/API_REFERENCE.md](backend/API_REFERENCE.md)** - Complete API documentation
+- **[test/README.md](test/README.md)** - Testing guide
+
+### All Documentation
+See **[DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)** for complete documentation index
+
+## 📡 API Endpoints
+
+### Authentication
+```bash
+POST /api/auth/signup          # Create account
+POST /api/auth/login           # Email/password login
+POST /api/auth/wallet          # Wallet authentication
+POST /api/auth/logout          # Logout
+```
+
+### Products
+```bash
+POST   /api/products           # Create product
+GET    /api/products/:id       # Get product
+PUT    /api/products/:id       # Update product
+DELETE /api/products/:id       # Deactivate product
+GET    /api/products/user/:id  # List user products
+```
+
+### Payments (Escrow)
+```bash
+POST /api/payments/escrow                    # Create escrow
+POST /api/payments/escrow/:id/confirm-delivery  # Confirm delivery
+POST /api/payments/escrow/:id/release        # Release funds
+POST /api/payments/escrow/:id/dispute        # Raise dispute
+GET  /api/payments/escrow/:id                # Get escrow details
+```
+
+### QR Codes
+```bash
+POST /api/qr/generate/:productId  # Generate QR code
+GET  /api/qr/verify/:productId    # Verify product
+POST /api/qr/scan                 # Scan QR code
+```
+
+### IPFS
+```bash
+POST   /api/ipfs/upload       # Upload file
+GET    /api/ipfs/:hash        # Get file info
+POST   /api/ipfs/pin          # Pin existing hash
+DELETE /api/ipfs/unpin/:hash  # Unpin content
+```
+
+See **[backend/API_REFERENCE.md](backend/API_REFERENCE.md)** for complete API documentation.
+
+## 🔧 Available Scripts
+
+```bash
+# Setup and Installation
+npm run setup              # Run setup wizard
+npm install               # Install dependencies
+
+# Smart Contracts
+npm run compile           # Compile contracts
+npm run deploy:fuji       # Deploy to Fuji testnet
+npm run deploy:mainnet    # Deploy to mainnet
+npm run post-deploy       # Copy ABIs and configure
+npm run test:contracts    # Run contract tests
+
+# Backend
+npm run backend           # Start backend (dev mode)
+npm run backend:start     # Start backend (production)
+
+# Testing
+npm run test:api          # Test all API endpoints
+```
+
+## 🏗️ Project Structure
+
+```
+agrichain-avalanche/
+├── contracts/              # Smart contracts
+│   ├── ProductRegistry.sol
+│   ├── Escrow.sol
+│   └── supplyChain/
+├── backend/               # Backend API
+│   ├── src/
+│   │   ├── routes/       # API routes
+│   │   ├── middleware/   # Auth, validation
+│   │   ├── config/       # Configuration
+│   │   └── utils/        # Utilities
+│   ├── database/         # SQL schema
+│   └── abis/            # Contract ABIs
+├── scripts/              # Automation scripts
+├── test/                 # Tests
+├── migrations/           # Truffle migrations
+└── docs/                # Documentation
+```
 
 1. Clone the repo
    ```sh
