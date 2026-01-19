@@ -2,6 +2,7 @@
   "name": "agrichain-avalanche",
   "version": "1.0.0",
   "description": "Blockchain-based supply chain management on Avalanche",
+  "author": "Nitish K S",
   "scripts": {
     "setup": "node scripts/setup.js",
     "compile": "truffle compile",

@@ -2,6 +2,7 @@
   "name": "supply-chain-backend",
   "version": "1.0.0",
   "description": "Backend API for blockchain-based supply chain management",
+  "author": "Nitish K S",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
