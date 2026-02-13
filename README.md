@@ -1,465 +1,268 @@
-<!-- PROJECT LOGO -->
+# 🌾 Agritrace - Smart Chain Supply Tracking
 
-<br />
 <div align="center">
-  <a href="#">
-    <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChainLogo.png" alt="Logo" width="145" height="55">
-  </a>
+  <img src="https://github.com/ac12644/Supply-Chain/blob/main/images/AgriChainLogo.png" alt="Logo" width="145" height="55">
   
-  <h3 align="center">AgriChain - Blockchain Supply Chain on Avalanche</h3>
-
-  <p align="center">
-    A complete blockchain-based supply chain management system with product registry, escrow payments, QR verification, and IPFS storage - deployed on Avalanche C-Chain.
-  </p>
-
-  <p align="center">
-    <a href="https://betterprogramming.pub/supply-chain-smart-contract-design-e0ae5071bcbe">📖 Original Article</a> •
-    <a href="AVALANCHE_DEPLOYMENT_GUIDE.md">🚀 Deployment Guide</a> •
-    <a href="DOCUMENTATION_INDEX.md">📚 Documentation</a> •
-    <a href="backend/API_REFERENCE.md">📡 API Reference</a>
-  </p>
-
-  <p align="center">
-    <strong>✅ Status: COMPLETE & DEPLOYMENT READY</strong>
-  </p>
+  <p><strong>Blockchain-based agricultural supply chain management on Avalanche</strong></p>
+  
+  [![Avalanche](https://img.shields.io/badge/Avalanche-Fuji%20Testnet-E84142?style=flat&logo=avalanche)](https://testnet.snowtrace.io/address/0x8bb1D4dE341096dBAd6384d965256d94dA4D8590)
+  [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat&logo=next.js)](https://nextjs.org/)
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 </div>
 
 ---
 
-## 🎉 Project Status
+## 🎯 Live Demo
 
-**Implementation**: ✅ **COMPLETE** (8/8 Requirements Met)  
-**Blockchain**: ✅ Avalanche C-Chain (Fuji Testnet + Mainnet)  
-**Backend API**: ✅ 25+ Endpoints Ready  
-**Documentation**: ✅ 13 Comprehensive Guides  
-**Testing**: ✅ Automated Test Suite  
-**Deployment**: ✅ Fully Automated  
+- **Smart Contracts**: [View on SnowTrace](https://testnet.snowtrace.io/address/0x8bb1D4dE341096dBAd6384d965256d94dA4D8590)
+- **Sample Transaction**: [View Transaction](https://testnet.snowtrace.io/tx/0x3f90e3a1a861d657e0e2a881111cf16225b2573b08991b81c2899bcfa45a1304)
+- **Frontend**: http://localhost:3001 (after setup)
 
-### Quick Links
-- 📋 [Project Summary](PROJECT_SUMMARY.md) - Complete overview
-- 🚀 [Deployment Guide](AVALANCHE_DEPLOYMENT_GUIDE.md) - Deploy in 25 minutes
-- ⚡ [Quick Reference](QUICK_REFERENCE.md) - Commands & API
-- 📊 [Requirements Checklist](REQUIREMENTS_CHECKLIST.md) - Implementation status
-- 🔄 [Workflow Guide](WORKFLOW_GUIDE.md) - System workflows
-- 📚 [Documentation Index](DOCUMENTATION_INDEX.md) - All documentation
+## ✨ Features
 
----
+### 🔗 Blockchain Integration
+- ✅ **3 Smart Contracts** deployed on Avalanche Fuji testnet
+- ✅ **Real-time verification** via blockchain explorer
+- ✅ **Transparent tracking** from farm to consumer
+- ✅ **Immutable records** on public blockchain
 
-## About The Project
+### 📱 User Features
+- ✅ **QR Code Generation** - Links directly to blockchain records
+- ✅ **Camera Scanning** - Live product verification
+- ✅ **MetaMask Integration** - Wallet-based authentication
+- ✅ **Multi-Role Support** - Farmer, Admin, Transporter, Retailer, Consumer
+- ✅ **Admin Approval System** - Product verification workflow
+- ✅ **Persistent Storage** - localStorage with cross-page sync
 
-The agricultural industry is a major contributor to the global economy, with over $6 trillion in revenue every year. This industry provides the world with essential commodities such as rice, corn, wheat and livestock. However, despite its vital role in providing essential products around the globe, agricultural supply chains face many common challenges across geographies and commodities.
+### 🎨 Modern UI/UX
+- ✅ **Next.js 14** with React
+- ✅ **TailwindCSS** styling
+- ✅ **Responsive Design** - Mobile and desktop
+- ✅ **Dark Mode** support
+- ✅ **Smooth Animations** and transitions
 
-Blockchain technology creates a single source of truth. This is important for supply chains that involve multiple participants in a network who don't necessarily trust each other.
+## 🚀 Quick Start
 
-This project provides a **complete, production-ready** blockchain supply chain solution deployed on **Avalanche C-Chain**, featuring:
+### Prerequisites
+- Node.js v16+
+- MetaMask browser extension
+- Avalanche Fuji testnet AVAX ([Get from faucet](https://faucet.avax.network/))
 
-- ✅ **Smart Contracts** - Product registry, escrow payments, supply chain tracking
-- ✅ **Backend API** - 25+ RESTful endpoints with authentication
-- ✅ **Database** - PostgreSQL with Row Level Security
-- ✅ **IPFS Storage** - Decentralized file storage via Pinata
-- ✅ **QR Codes** - Product verification and tracking
-- ✅ **Security** - JWT auth, wallet signatures, rate limiting
-- ✅ **Documentation** - 13 comprehensive guides
+### Installation
 
-![Flow diagram](/images/flow.png)
+1. **Clone the repository**
+```bash
+git clone https://github.com/Harih2007/Agritrace.git
+cd Agritrace
+```
 
-## 🚀 What's New - Avalanche Integration
+2. **Install frontend dependencies**
+```bash
+cd frontend
+npm install
+```
 
-This implementation extends the original supply chain concept with:
+3. **Configure environment**
+```bash
+cp .env.example .env.local
+# Edit .env.local with your settings
+```
 
-### Blockchain Features
-- **Avalanche C-Chain** integration (Fuji testnet + mainnet)
-- **Sub-second finality** for fast transactions
-- **Low gas costs** (~0.01-0.1 AVAX per transaction)
-- **Smart contract events** for real-time tracking
-- **Transaction retry logic** with exponential backoff
+4. **Start the application**
+```bash
+npm run dev
+```
 
-### Backend Features
-- **Dual Authentication** - Email/password + wallet signatures
-- **Product Management** - Full CRUD with blockchain sync
-- **Escrow Payments** - Secure AVAX payments with dispute resolution
-- **QR Code System** - Generate and verify product authenticity
-- **IPFS Integration** - Decentralized storage for product assets
-- **Comprehensive API** - RESTful endpoints with validation
+5. **Open your browser**
+```
+http://localhost:3001
+```
 
-### Developer Features
-- **Automated Deployment** - One-command setup and deployment
-- **Testing Suite** - Automated API and contract testing
-- **Error Handling** - Comprehensive logging and retry logic
-- **Documentation** - Step-by-step guides for everything
+## 📱 User Roles & Pages
 
-### ⚙️Functions:
+### 🌾 Farmer Dashboard
+- Register new products
+- Track product status
+- Generate QR codes
+- View blockchain records
+- **URL**: `/farmer`
 
-1. Farmer creates a product and lists it to be purchased by Distributor
-2. Farmer ships the product
-3. Distributor receives the product, process it, package it and put it on sale
-4. Retailer buys the product from Distributor
-5. Distributor ships the product to Retailer
-6. Retailer receives the product and put it on sale
-7. Consumer purchase the product
+### 👨‍💼 Admin Panel
+- Approve/reject products
+- Monitor all products
+- View statistics
+- Manage supply chain
+- **URL**: `/admin`
+
+### 🚚 Transporter
+- View assigned shipments
+- Update delivery status
+- Track locations
+- **URL**: `/transporter`
+
+### 🏪 Retailer
+- Receive products
+- Update inventory
+- Track sales
+- **URL**: `/retailer`
+
+### 📱 Consumer Scanner
+- Scan QR codes
+- Verify product authenticity
+- View product journey
+- Check blockchain records
+- **URL**: `/scan`
+
+## 🔗 Smart Contracts
+
+### Deployed on Avalanche Fuji Testnet
+
+| Contract | Address | Explorer |
+|----------|---------|----------|
+| ProductRegistry | `0x8bb1D4dE341096dBAd6384d965256d94dA4D8590` | [View](https://testnet.snowtrace.io/address/0x8bb1D4dE341096dBAd6384d965256d94dA4D8590) |
+| SupplyChain | `0x9B59524C1660e70411159Af4C3D24fDfCc0CA684` | [View](https://testnet.snowtrace.io/address/0x9B59524C1660e70411159Af4C3D24fDfCc0CA684) |
+| Escrow | `0xEC7C5FBe04d9abD1993CB32225c98DE0a8683066` | [View](https://testnet.snowtrace.io/address/0xEC7C5FBe04d9abD1993CB32225c98DE0a8683066) |
 
 ## 🛠️ Technology Stack
 
+### Frontend
+- **Framework**: Next.js 14
+- **UI Library**: React 18
+- **Styling**: TailwindCSS
+- **Web3**: Wagmi, Ethers.js
+- **QR Codes**: qrcode.react
+- **Notifications**: react-hot-toast
+
+### Backend (Optional)
+- **Runtime**: Node.js
+- **Framework**: Express.js
+- **Database**: Supabase (PostgreSQL)
+- **Storage**: IPFS (Pinata)
+- **Auth**: JWT
+
 ### Blockchain
-- **Avalanche C-Chain** (Fuji testnet + mainnet)
-- **Solidity** ^0.8.0
-- **Truffle Suite** v5.11.0
-- **ethers.js** v6.6.0
+- **Network**: Avalanche C-Chain (Fuji Testnet)
+- **Language**: Solidity ^0.8.0
+- **Tools**: Truffle, Hardhat
+- **Explorer**: SnowTrace
 
-### Backend
-- **Node.js** v16+
-- **Express.js** v4.18
-- **Supabase** (PostgreSQL)
-- **Winston** (logging)
-- **Joi** (validation)
+## 📖 Documentation
 
-### Storage & Services
-- **IPFS** via Pinata
-- **QR Code** generation
-- **JWT** authentication
+- **[SYSTEM_STATUS.md](SYSTEM_STATUS.md)** - Complete system overview
+- **[DEMO_README.md](DEMO_README.md)** - Demo guide
+- **[PROOF_OF_WORK.md](PROOF_OF_WORK.md)** - Blockchain verification
+- **[SMART_CONTRACT_DEMO_GUIDE.md](SMART_CONTRACT_DEMO_GUIDE.md)** - Contract demo
+- **[PERSISTENT_STORAGE_COMPLETE.md](PERSISTENT_STORAGE_COMPLETE.md)** - Storage system
+- **[METAMASK_CONNECTION_FIXED.md](METAMASK_CONNECTION_FIXED.md)** - Wallet setup
 
-## 🚀 Quick Start (25 Minutes)
+## 🎯 Key Workflows
 
-### Prerequisites
-- Node.js v16 or higher
-- npm or yarn
-- Avalanche wallet with testnet AVAX ([Get from faucet](https://faucet.avax.network/))
-- Supabase account
-- Pinata account
-
-### Step 1: Setup (5 minutes)
-```bash
-# Clone the repository
-git clone <repository-url>
-cd agrichain-avalanche
-
-# Run automated setup
-npm run setup
+### 1. Product Registration
+```
+Farmer → Register Product → Processing Status → Admin Approval → Approved
 ```
 
-### Step 2: Configure (10 minutes)
-```bash
-# Edit root .env
-MNEMONIC_KEY=your_12_word_mnemonic
-AVALANCHE_RPC=https://api.avax-test.network/ext/bc/C/rpc
-
-# Edit backend/.env
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_anon_key
-SUPABASE_SERVICE_KEY=your_service_key
-AVALANCHE_RPC_URL=https://api.avax-test.network/ext/bc/C/rpc
-PRIVATE_KEY=your_private_key
-PINATA_JWT=your_pinata_jwt
-JWT_SECRET=your_jwt_secret
+### 2. QR Code Generation
+```
+Product → Generate QR → Links to Blockchain → Consumer Scans → Verifies Authenticity
 ```
 
-### Step 3: Deploy Contracts (5 minutes)
-```bash
-# Compile smart contracts
-npm run compile
-
-# Deploy to Avalanche Fuji testnet
-npm run deploy:fuji
-
-# Copy ABIs and configure backend
-npm run post-deploy
+### 3. Supply Chain Tracking
+```
+Farm → Transporter → Distributor → Retailer → Consumer
 ```
 
-### Step 4: Setup Database (2 minutes)
-1. Go to your Supabase project
-2. Run the SQL from `backend/database/schema.sql`
-3. Verify tables are created
-
-### Step 5: Start Backend (1 minute)
-```bash
-# Start the backend server
-npm run backend
+### 4. Blockchain Verification
+```
+Product → View On-chain → Opens SnowTrace → Shows Transaction → Public Verification
 ```
 
-### Step 6: Test (2 minutes)
-```bash
-# Run API tests
-npm run test:api
-```
+## 🔐 Security Features
 
-**🎉 Done! Your system is now running on Avalanche Fuji testnet!**
+- ✅ **Wallet Authentication** - MetaMask integration
+- ✅ **Role-Based Access** - Different permissions per role
+- ✅ **Blockchain Immutability** - Tamper-proof records
+- ✅ **Public Verification** - Anyone can verify on blockchain
+- ✅ **Secure Storage** - localStorage with encryption ready
 
-## 📚 Documentation
-
-### Essential Guides
-- **[AVALANCHE_DEPLOYMENT_GUIDE.md](AVALANCHE_DEPLOYMENT_GUIDE.md)** - Complete deployment instructions
-- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick commands and API reference
-- **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** - Project overview and status
-- **[REQUIREMENTS_CHECKLIST.md](REQUIREMENTS_CHECKLIST.md)** - Implementation tracking
-
-### Technical Documentation
-- **[AVALANCHE_INTEGRATION.md](AVALANCHE_INTEGRATION.md)** - Avalanche-specific details
-- **[WORKFLOW_GUIDE.md](WORKFLOW_GUIDE.md)** - System workflows and architecture
-- **[backend/API_REFERENCE.md](backend/API_REFERENCE.md)** - Complete API documentation
-- **[test/README.md](test/README.md)** - Testing guide
-
-### All Documentation
-See **[DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)** for complete documentation index
-
-## 📡 API Endpoints
-
-### Authentication
-```bash
-POST /api/auth/signup          # Create account
-POST /api/auth/login           # Email/password login
-POST /api/auth/wallet          # Wallet authentication
-POST /api/auth/logout          # Logout
-```
-
-### Products
-```bash
-POST   /api/products           # Create product
-GET    /api/products/:id       # Get product
-PUT    /api/products/:id       # Update product
-DELETE /api/products/:id       # Deactivate product
-GET    /api/products/user/:id  # List user products
-```
-
-### Payments (Escrow)
-```bash
-POST /api/payments/escrow                    # Create escrow
-POST /api/payments/escrow/:id/confirm-delivery  # Confirm delivery
-POST /api/payments/escrow/:id/release        # Release funds
-POST /api/payments/escrow/:id/dispute        # Raise dispute
-GET  /api/payments/escrow/:id                # Get escrow details
-```
-
-### QR Codes
-```bash
-POST /api/qr/generate/:productId  # Generate QR code
-GET  /api/qr/verify/:productId    # Verify product
-POST /api/qr/scan                 # Scan QR code
-```
-
-### IPFS
-```bash
-POST   /api/ipfs/upload       # Upload file
-GET    /api/ipfs/:hash        # Get file info
-POST   /api/ipfs/pin          # Pin existing hash
-DELETE /api/ipfs/unpin/:hash  # Unpin content
-```
-
-See **[backend/API_REFERENCE.md](backend/API_REFERENCE.md)** for complete API documentation.
-
-## 🔧 Available Scripts
-
-```bash
-# Setup and Installation
-npm run setup              # Run setup wizard
-npm install               # Install dependencies
-
-# Smart Contracts
-npm run compile           # Compile contracts
-npm run deploy:fuji       # Deploy to Fuji testnet
-npm run deploy:mainnet    # Deploy to mainnet
-npm run post-deploy       # Copy ABIs and configure
-npm run test:contracts    # Run contract tests
-
-# Backend
-npm run backend           # Start backend (dev mode)
-npm run backend:start     # Start backend (production)
-
-# Testing
-npm run test:api          # Test all API endpoints
-```
-
-## 🏗️ Project Structure
+## 📊 Project Structure
 
 ```
-agrichain-avalanche/
-├── contracts/              # Smart contracts
+Agritrace/
+├── frontend/              # Next.js application
+│   ├── app/              # Pages (farmer, admin, etc.)
+│   ├── components/       # React components
+│   ├── lib/             # Utilities (productStore)
+│   └── utils/           # Mock data
+├── backend/              # Express API (optional)
+│   ├── src/             # Source code
+│   └── database/        # SQL schemas
+├── contracts/            # Smart contracts
 │   ├── ProductRegistry.sol
-│   ├── Escrow.sol
-│   └── supplyChain/
-├── backend/               # Backend API
-│   ├── src/
-│   │   ├── routes/       # API routes
-│   │   ├── middleware/   # Auth, validation
-│   │   ├── config/       # Configuration
-│   │   └── utils/        # Utilities
-│   ├── database/         # SQL schema
-│   └── abis/            # Contract ABIs
-├── scripts/              # Automation scripts
-├── test/                 # Tests
-├── migrations/           # Truffle migrations
-└── docs/                # Documentation
+│   ├── SupplyChain.sol
+│   └── Escrow.sol
+└── scripts/             # Deployment scripts
 ```
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/ac12644/Supply-Chain.git
-   ```
-2. Install packages
-   ```sh
-   yarn
-   ```
-3. start truffle development nework
-   ```sh
-   truffle develop
-   ```
-4. test smart contracts
-   ```sh
-    $truffle(develop)> test
-   ```
-5. to deploy run
-   ```sh
-    $truffle(develop)> deploy
-   ```
+## 🧪 Testing
 
-### Specification
+### Test the Application
+```bash
+# Start frontend
+cd frontend
+npm run dev
 
-### Modifiers
-
-1. Checking ownership and values paid
-
-```solidity
-// Define a modifer that checks to see if msg.sender == owner of the contract
-modifier onlyOwner() {
-  require(msg.sender == owner);
-  _;
-}
-
-// Define a modifer that verifies the Caller
-modifier verifyCaller (address _address) {
-  require(msg.sender == _address);
-  _;
-}
-
-// Define a modifier that checks if the paid amount is sufficient to cover the price
-modifier paidEnough(uint _price) {
-  require(msg.value >= _price);
-  _;
-}
-
-// Define a modifier that checks the price and refunds the remaining balance
-modifier checkValue(uint _productCode, address payable addressToFund) { // ADDED address payable
-  uint _price = items[_productCode].productPrice;
-  uint  amountToReturn = msg.value - _price;
-  addressToFund.transfer(amountToReturn);
-  _;
-}
+# Visit pages
+http://localhost:3001/farmer
+http://localhost:3001/admin
+http://localhost:3001/scan
 ```
 
-2. Check the item has passed the previous step of the supplychain.
+### Verify Blockchain
+1. Click "View On-chain" on any product
+2. Browser opens SnowTrace explorer
+3. See real blockchain transaction
+4. Verify contract deployment
 
-```solidity
-// itemState : 0
-modifier producedByFarmer(uint _productCode) {
-  require(items[_productCode].itemState == State.ProduceByFarmer);
-  _;
-}
-// State : 1
-modifier forSaleByFarmer(uint _productCode) {
-  require(items[_productCode].itemState == State.ForSaleByFarmer);
-  _;
-}
-// State : 2
-modifier purchasedByDistributor(uint _productCode) {
-  require(items[_productCode].itemState == State.PurchasedByDistributor);
-  _;
-}
-// State : 3
-modifier shippedByFarmer(uint _productCode) {
-  require(items[_productCode].itemState == State.ShippedByFarmer);
-  _;
-}
-// State : 4
-modifier receivedByDistributor(uint _productCode) {
-  require(items[_productCode].itemState == State.ReceivedByDistributor);
-  _;
-}
-// State : 5
-modifier processByDistributor(uint _productCode) {
-  require(items[_productCode].itemState == State.ProcessedByDistributor);
-  _;
-}
-// State : 6
-modifier packagedByDistributor(uint _productCode) {
-  require(items[_productCode].itemState == State.PackageByDistributor);
-  _;
-}
-// State : 7
-modifier forSaleByDistributor(uint _productCode) {
-  require(items[_productCode].itemState == State.ForSaleByDistributor);
-  _;
-}
+### Test QR Codes
+1. Generate QR code for a product
+2. Scan with phone camera
+3. Opens blockchain explorer
+4. Verifies product authenticity
 
-// State : 8
-modifier shippedByDistributor(uint _productCode) {
-  require(items[_productCode].itemState == State.ShippedByDistributor);
-  _;
-}
-// State : 9
-modifier purchasedByRetailer(uint _productCode) {
-  require(items[_productCode].itemState == State.PurchasedByRetailer);
-  _;
-}
-// State : 10
-modifier receivedByRetailer(uint _productCode) {
-  require(items[_productCode].itemState == State.ReceivedByRetailer);
-  _;
-}
-// State : 11
-modifier forSaleByRetailer(uint _productCode) {
-  require(items[_productCode].itemState == State.ForSaleByRetailer);
-  _;
-}
-// State : 12
-modifier purchasedByConsumer(uint _productCode) {
-  require(items[_productCode].itemState == State.PurchasedByConsumer);
-  _;
-}
-```
+## 🤝 Contributing
 
-3. Role based modifiers inherited from other contracts.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-_Note: Used to implement Access Control_
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-```solidity
-// FarmerRole.sol
-modifier onlyFarmer() {
-  require(isFarmer(msg.sender));
-  _;
-}
-// DistributorRole.sol
-modifier onlyDistributor() {
-  require(isDistributor(msg.sender));
-  _;
-}
-// RetailerRole.sol
-modifier onlyRetailer() {
-   require(isRetailer(msg.sender));
-  _;
-}
-// ConsumerRole.sol
-modifier onlyConsumer() {
-  require(isConsumer(msg.sender));
-  _;
-}
+## 📄 License
 
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Events
+## 👨‍💻 Author
 
-Each supplychain function emits its own event.
+**Hariharan**
+- GitHub: [@Harih2007](https://github.com/Harih2007)
 
-```solidity
-event ProduceByFarmer(uint productCode);         //1
-event ForSaleByFarmer(uint productCode);         //2
-event PurchasedByDistributor(uint productCode);  //3
-event ShippedByFarmer(uint productCode);         //4
-event ReceivedByDistributor(uint productCode);   //5
-event ProcessedByDistributor(uint productCode);  //6
-event PackagedByDistributor(uint productCode);   //7
-event ForSaleByDistributor(uint productCode);    //8
-event PurchasedByRetailer(uint productCode);     //9
-event ShippedByDistributor(uint productCode);    //10
-event ReceivedByRetailer(uint productCode);      //11
-event ForSaleByRetailer(uint productCode);       //12
-event PurchasedByConsumer(uint productCode);     //13
-```
+## 🙏 Acknowledgments
+
+- Avalanche for the blockchain infrastructure
+- Next.js team for the amazing framework
+- OpenZeppelin for smart contract libraries
+- The blockchain community for inspiration
+
+## 📞 Support
+
+For support, please open an issue in the GitHub repository or contact the maintainers.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ for transparent agriculture</p>
+  <p>⭐ Star this repo if you find it helpful!</p>
+</div>
